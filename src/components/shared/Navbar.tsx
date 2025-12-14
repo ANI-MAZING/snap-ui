@@ -98,7 +98,7 @@ const MobileSheetNav = ({
       <SheetTrigger>
         <Menu className="w-6 h-6" />
       </SheetTrigger>
-      <SheetContent side="right" className="w-[260px] flex flex-col gap-6 py-10">
+      <SheetContent className="w-64 flex flex-col gap-6 py-10">
         {navItems.map((item) => {
           const active = location.pathname === item.path;
           return (

@@ -4,7 +4,6 @@ import { PatternCard } from "@/components/shared/PatternCard";
 import { PatternSearch } from "@/components/shared/PatternSearch";
 import { Pagination } from "@/components/shared/Pagination";
 import { useFavoritesStore } from "@/store/useFavoritesStore";
-import { Navbar } from "@/components/shared/Navbar";
 import { BackgroundRenderer } from "@/components/background/BackgroundRenderer";
 
 export default function FavoritePage() {

@@ -17,9 +17,7 @@ export const SheetTrigger = ({
 export const SheetContent = ({
   children,
   className,
-}: {
-  children?: React.ReactNode;
-  className?: string;
-}) => {
-  return <div className={className}>{children}</div>;
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return <div className={className} {...props}>{children}</div>;
 };

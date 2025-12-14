@@ -1,5 +1,4 @@
 import { BackgroundRenderer } from "@/components/background/BackgroundRenderer";
-import { Navbar } from "@/components/shared/Navbar";
 
 export default function Home() {
 	return (

@@ -35,7 +35,7 @@ export const PatternCard = ({ pattern }: { pattern: PatternMeta }) => {
     <Card
     ref={ref}
       className="
-        relative group w-full h-[220px] rounded-2xl overflow-hidden cursor-pointer 
+        relative group w-full h-56 rounded-2xl overflow-hidden cursor-pointer 
         shadow-sm bg-white transition hover:shadow-md 
       "
     >

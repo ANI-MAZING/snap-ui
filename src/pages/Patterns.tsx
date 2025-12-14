@@ -4,7 +4,6 @@ import { PatternCard } from "@/components/shared/PatternCard";
 import { PatternTabs } from "@/components/shared/PatternTabs";
 import { PatternSearch } from "@/components/shared/PatternSearch";
 import { Pagination } from "@/components/shared/Pagination";
-import { Navbar } from "@/components/shared/Navbar";
 
 import { useFavoritesStore } from "@/store/useFavoritesStore";
 import { useTagFilterStore } from "@/store/useTagFilterStore";
