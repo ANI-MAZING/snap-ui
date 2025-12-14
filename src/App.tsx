@@ -14,7 +14,7 @@ function App() {
       <Navbar />
 
       {/* PAGE CONTENT */}
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto ">
         <Outlet />
       </main>
 

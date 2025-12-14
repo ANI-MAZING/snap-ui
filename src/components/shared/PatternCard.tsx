@@ -14,7 +14,7 @@ export const PatternCard = ({ pattern }: { pattern: PatternMeta }) => {
   const setPreview = usePreviewStore((s) => s.setPreview);
 
   const toggleFavorite = useFavoritesStore((s) => s.toggleFavorite);
-  const isFavorite = useFavoritesStore((s) => s.isFavorite(pattern.id));
+  const isFavorite = useFavoritesStore((s) => s.favorites.includes(pattern.id));
 
   const { copy } = useCopy();
 
@@ -30,12 +30,13 @@ export const PatternCard = ({ pattern }: { pattern: PatternMeta }) => {
     toast("Copied pattern styles!");
   };
 
+
   return (
     <Card
     ref={ref}
       className="
         relative group w-full h-[220px] rounded-2xl overflow-hidden cursor-pointer 
-        shadow-sm bg-white transition hover:shadow-md
+        shadow-sm bg-white transition hover:shadow-md 
       "
     >
       {/* Thumbnail */}
@@ -55,7 +56,7 @@ export const PatternCard = ({ pattern }: { pattern: PatternMeta }) => {
           toggleFavorite(pattern.id);
         }}
         className="
-          absolute top-3 left-3 z-20 p-1 rounded-full bg-white shadow-sm 
+          absolute top-3 left-3 z-31 p-1 rounded-full bg-white shadow-sm 
           hover:scale-110 transition cursor-pointer
         "
       >
@@ -79,11 +80,11 @@ export const PatternCard = ({ pattern }: { pattern: PatternMeta }) => {
       <div
         className="
           absolute inset-0 z-30 bg-black/0 group-hover:bg-black/30 
-          transition flex items-center justify-center opacity-0 
+          transition flex  items-center justify-center opacity-0 
           group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto
         "
       >
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2">
           <Button
             size="sm"
             variant="secondary"

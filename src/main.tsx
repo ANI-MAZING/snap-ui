@@ -7,6 +7,7 @@ import Patterns from './pages/Patterns'
 import Favorites from './pages/Favorites'
 import Home from './pages/Home'
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

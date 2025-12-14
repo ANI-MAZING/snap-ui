@@ -56,7 +56,7 @@ export default function PatternPage() {
   return (
     <>
     <BackgroundRenderer>
-    <div className="space-y-8 p-6">
+    <div className="space-y-8 max-w-6xl mx-auto py-20">
       {/* PAGE HEADER */}
       <div>
         <h1 className="text-4xl font-bold">Pattern Library</h1>
@@ -105,7 +105,7 @@ export default function PatternPage() {
       </p>
 
       {/* PATTERN GRID */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-4 gap-6">
         {paginated.map((p) => (
           <PatternCard key={p.id} pattern={p} />
         ))}

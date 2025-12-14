@@ -12,15 +12,19 @@ export const useFavoritesStore = create<FavoritesState>()(
     (set, get) => ({
       favorites: [],
 
-      toggleFavorite: (id: string) => {
+      toggleFavorite: (id) => {
         const favs = get().favorites;
+
         const updated = favs.includes(id)
           ? favs.filter((f) => f !== id)
           : [...favs, id];
+
         set({ favorites: updated });
       },
 
-      isFavorite: (id: string) => get().favorites.includes(id),
+      isFavorite: (id) => {
+        return get().favorites.includes(id);
+      },
     }),
     {
       name: "snapui-favorites", // localStorage key
